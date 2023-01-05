@@ -34,10 +34,10 @@
 <main>
   <h2>We're Launching Soon</h2>
   <div class="countdown">
-    <Card cb={handleTick} name="Days" number={time.days} />
-    <Card cb={handleTick} name="Hours" number={time.hours} />
-    <Card cb={handleTick} name="Minutes" number={time.minutes} />
-    <Card cb={handleTick} name="Seconds" number={time.seconds} />
+    <Card callback={handleTick} name="Days" number={time.days} />
+    <Card callback={handleTick} name="Hours" number={time.hours} />
+    <Card callback={handleTick} name="Minutes" number={time.minutes} />
+    <Card callback={handleTick} name="Seconds" number={time.seconds} />
   </div>
 </main>
 
