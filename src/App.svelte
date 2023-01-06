@@ -1,9 +1,11 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import Card from './lib/Card.svelte';
+  import { onMount } from "svelte";
+  import Card from "./lib/Card.svelte";
+  import Footer from "./lib/Footer.svelte";
 
+  // Set default values to 9 days
   let time = {
-    days: 0,
+    days: 9,
     hours: 0,
     minutes: 0,
     seconds: 0,
@@ -13,12 +15,12 @@
 
   const handleTick = () => {
     const currentDate = new Date();
-    const res = target.getTime() - currentDate.getTime();
+    const gap = target.getTime() - currentDate.getTime();
 
-    const getDays = Math.floor((res / (1000 * 60 * 60 * 24)));
-    const getHours = Math.floor((res / (1000 * 60 * 60)) % 24);
-    const getMinutes = Math.floor((res / 1000 / 60) % 60);
-    const getSeconds = Math.floor((res / 1000) % 60);
+    const getDays = Math.floor((gap / (1000 * 60 * 60 * 24)));
+    const getHours = Math.floor((gap / (1000 * 60 * 60)) % 24);
+    const getMinutes = Math.floor((gap / 1000 / 60) % 60);
+    const getSeconds = Math.floor((gap / 1000) % 60);
     
     time.days = getDays;
     time.hours = getHours;
@@ -40,15 +42,33 @@
     <Card callback={handleTick} name="Seconds" number={time.seconds} />
   </div>
 </main>
+<Footer />
 
 <style>
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0.75;
+    row-gap: 7rem;
+  }
   h2 {
     color: white;
-    letter-spacing: 9px;
+    letter-spacing: 5px;
   }
   .countdown {
     display: flex;
     justify-content: center;
-    column-gap: 2.5rem;
+    gap: .5rem;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      letter-spacing: 9px;
+    }
+    .countdown {
+      gap: 5rem 2.5rem;
+      flex-wrap: wrap;
+    }
   }
 </style>

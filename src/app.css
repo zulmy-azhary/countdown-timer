@@ -46,10 +46,23 @@ h2, p {
   text-transform: uppercase;
 }
 
+svg path {
+  fill: var(--grayishBlue);
+  transition: fill 0.2s ease-in-out;
+}
+
+svg:hover path {
+  fill: var(--softRed);
+}
+
 #app {
   margin: 0 auto;
   width: 100%;
+  min-height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #app::before,

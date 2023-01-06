@@ -1,0 +1,60 @@
+<script lang="ts">
+  import Facebook from "../assets/icons/Facebook.svelte";
+  import Pinterest from "../assets/icons/Pinterest.svelte";
+  import Instagram from "../assets/icons/Instagram.svelte";
+</script>
+
+<footer>
+  <div class="icons">
+    <a href="#facebook"><Facebook /></a>
+    <a href="#pinterest"><Pinterest /></a>
+    <a href="#instagram"><Instagram /></a>
+  </div>
+  <p>
+    Created with 💜 by
+    <a
+      href="https://github.com/zulmy-azhary"
+      target="_blank"
+      rel="noreferrer"
+      title="Github Profile"
+    >
+      Zulmy Azhary
+    </a>
+  </p>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+  }
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+  }
+  a {
+    text-decoration: none;
+    color: var(--grayishBlue);
+    transition: color 0.2s ease-in-out;
+  }
+
+  p {
+    text-transform: none;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    color: var(--grayishBlue);
+  }
+  p a {
+    color: var(--softRed);
+  }
+
+  @media (min-width: 768px) {
+    p {
+      letter-spacing: 1px;
+      font-size: 1rem;
+    }
+  }
+</style>
