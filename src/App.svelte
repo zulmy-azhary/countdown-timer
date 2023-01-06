@@ -34,7 +34,7 @@
 </script>
 
 <main>
-  <h2>We're Launching Soon</h2>
+  <h1>We're Launching Soon</h1>
   <div class="countdown">
     <Card callback={handleTick} name="Days" number={time.days} />
     <Card callback={handleTick} name="Hours" number={time.hours} />
@@ -52,7 +52,8 @@
     flex: 0.75;
     row-gap: 7rem;
   }
-  h2 {
+  h1 {
+    font-size: 1.5rem;
     color: white;
     letter-spacing: 5px;
   }
@@ -63,7 +64,7 @@
   }
 
   @media (min-width: 768px) {
-    h2 {
+    h1 {
       letter-spacing: 9px;
     }
     .countdown {

@@ -6,9 +6,9 @@
 
 <footer>
   <div class="icons">
-    <a href="#facebook"><Facebook /></a>
-    <a href="#pinterest"><Pinterest /></a>
-    <a href="#instagram"><Instagram /></a>
+    <Facebook />
+    <Pinterest />
+    <Instagram />
   </div>
   <p>
     Created with 💜 by
@@ -37,8 +37,7 @@
   }
   a {
     text-decoration: none;
-    color: var(--grayishBlue);
-    transition: color 0.2s ease-in-out;
+    color: var(--softRed);
   }
 
   p {
@@ -46,9 +45,6 @@
     letter-spacing: 2px;
     font-size: 0.75rem;
     color: var(--grayishBlue);
-  }
-  p a {
-    color: var(--softRed);
   }
 
   @media (min-width: 768px) {

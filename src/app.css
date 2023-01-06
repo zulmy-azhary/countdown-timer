@@ -42,8 +42,12 @@ body {
   background: linear-gradient(to bottom, var(--veryDarkBlackBlue) 10%, var(--customSoftRed));
 }
 
-h2, p {
+h1, p {
   text-transform: uppercase;
+}
+
+svg * {
+  cursor: pointer;
 }
 
 svg path {
